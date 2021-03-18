@@ -4,6 +4,7 @@ strikeThroughFirstItem = () => {
 
 strikeThroughFirstItem();
 
+
 addImage = (id, url) => {
   document.querySelector(id).src = url;
 };
@@ -22,24 +23,29 @@ addImage(
 );
 
 
-removeLastLi = () => {
-    document.querySelector('#arguments li: last-child').lastLi.remove();
-}
-removeLastLi();
-removeLastLi();
+// const removeLastLi = () => {
+//     // const lastLi = document.querySelector('#arguments li: last-child');
+//     document.querySelector('#arguments').lastElementChild;
+//     lastLi.remove();
+// }
+// // (#arguments li: nth-child(3))
+
+// removeLastLi();
+// removeLastLi();
 
 
-addToArgumentsList = (element) => {
-    // document.querySelector('ul #arguments').appendChild(element)
+// removeLastLi = () => {
+//     document.querySelectorAll('#arguments li: last-child').lastLi.remove();
+// }
+// removeLastLi();
+// removeLastLi();
 
-    // Explicit step-by-step way.
-    const arguments = document.querySelector('ul #arguments')
-    arguments.appendChild(element);
+
+argumentAppends = (element) => {
+    const arguments = document.querySelector('#arguments')
+    arguments.appendChild(element)
 }
 
 const newImage = document.createElement('img');
 newImage.src = 'https://top13.net/wp-content/uploads/2015/11/rare-wild-cats-5.jpg'
-newImage.style.height = '60px';
-
-addToArgumentsList(newImage);
-
+argumentAppends(newImage);
