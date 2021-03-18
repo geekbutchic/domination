@@ -54,3 +54,15 @@ input, textarea {
 .invisible {
     visibility: hidden;
 }
+
+#image-1 {
+    width: 500px;
+}
+
+#image-2 {
+    width: 500px;
+}
+
+#image-3 {
+    width: 500px;
+}
