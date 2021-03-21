@@ -28,13 +28,30 @@ const removeLastLi = () => {
 removeLastLi();
 removeLastLi();
 
+// 1. Write a function that takes in a node element and appends 
+// it to the Arguments `<ul>`.
+
 argumentAppends = (element) => {
   const arguments = document.querySelector("#arguments");
   arguments.appendChild(element);
 };
 
+// 2. Let's use it! Create an image element and pass it into your function.
 const newImage = document.createElement("img");
 newImage.src =
   "https://top13.net/wp-content/uploads/2015/11/rare-wild-cats-5.jpg";
 argumentAppends(newImage);
+
+// 3. Write a function that takes in an image element and makes its 
+// height 30 pixels.
+
+const makeSmall = (image) => {
+    image.style.height = '30px';
+}
+
+// 4. Let's use it. Query and then pass in to the function one of the 
+// images in the Image Area. It should become a small 30-pixel image.
+
+const smallImage = document.querySelector('#image-1');
+makeSmall('#image-1')
 
