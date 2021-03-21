@@ -45,13 +45,44 @@ argumentAppends(newImage);
 // 3. Write a function that takes in an image element and makes its 
 // height 30 pixels.
 
-const makeSmall = (image) => {
-    image.style.height = '30px';
+// Set it to 200px just so it looks more balanced 
+makeSmall = (image) => {
+    image.style.height = '200px';
 }
 
 // 4. Let's use it. Query and then pass in to the function one of the 
 // images in the Image Area. It should become a small 30-pixel image.
 
 const smallImage = document.querySelector('#image-1');
-makeSmall('#image-1')
+makeSmall(smallImage)
+
+// 5. Write a function that takes in an element and gives it 
+// the class `invisible`.
+
+invisible = (element) => {
+  element.className = 'invisible';
+}
+// Removes the we'll make forms that do something
+const disappearingTextField = document.querySelector('textarea');
+invisible(disappearingTextField);
+
+// 7. Write a function that takes in two strings, one representing a font size and one 
+// representing an id, and sets the thing with that id to have that size for its text.
+
+const changeFontSize = (element, newFontSize) => {
+  element.style.fontSize = newFontSize;
+}
+// Did 50px just to see dramatic difference
+const thing2 = document.querySelector('#thing-2');
+changeFontSize(thing2, '50px');
+
+// 1. Write a function that takes in text and returns a new `<li>` 
+// with that text as its `innerText`.
+
+makeTodo = (todoText) => {
+  const newTodo = document.createElement('li');
+  newTodo.innerText = todoText;
+
+  return newTodo;
+}
 
