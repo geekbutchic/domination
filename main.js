@@ -79,10 +79,19 @@ changeFontSize(thing2, '50px');
 // 1. Write a function that takes in text and returns a new `<li>` 
 // with that text as its `innerText`.
 
-makeTodo = (todoText) => {
-  const newTodo = document.createElement('li');
-  newTodo.innerText = todoText;
+makeTodo = (element) => {
+  const arguments = document.querySelector("#arguments");
+  arguments.appendChild(element);
+};
 
-  return newTodo;
+const newLi = document.querySelector('li')
+newLi.innerText = 'Adds something to this list.'
+makeTodo(newLi);
+
+const makeHeader = (text, size) => {
+  const header = document.createElement('h' + size)
+  header.innerText = text;
 }
 
+const header = makeHeader("I'm a header", 2);
+argumentAppends(header)
