@@ -79,19 +79,38 @@ changeFontSize(thing2, '50px');
 // 1. Write a function that takes in text and returns a new `<li>` 
 // with that text as its `innerText`.
 
-makeTodo = (element) => {
-  const arguments = document.querySelector("#arguments");
-  arguments.appendChild(element);
-};
+// makeTodo = (element) => {
+//   const arguments = document.querySelector("#arguments");
+//   arguments.appendChild(element);
+// };
 
-const newLi = document.querySelector('li')
-newLi.innerText = 'Adds something to this list.'
-makeTodo(newLi);
+// const newLi = document.querySelector('li')
+// newLi.innerText = 'Adds something to this list.'
+// makeTodo(newLi);
 
-makeHeader = (text, size) => {
-  const header = document.createElement('h' + size)
+// makeHeader = (text, size) => {
+//   const header = document.createElement('h' + size)
+//   header.innerText = text;
+// }
+
+// const header = makeHeader("I'm a header", 2);
+// argumentAppends(header)
+
+
+function createListItem (text) {
+  const listItem = document.createElement('li');
+  listItem.innerHTML = text;
+  return listItem;
+}
+
+// Call the function 
+const newListItem = createListItem('This is a new list item');
+argumentAppends(newListItem);
+
+function createHeader(size, text) {
+  const header = document.createElement(`h${size}`);
   header.innerText = text;
 }
 
-const header = makeHeader("I'm a header", 2);
-argumentAppends(header)
+const ourNewHeader = createHeader(4, 'new header!!!');
+argumentAppends(ourNewHeader)
