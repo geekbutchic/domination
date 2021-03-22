@@ -88,7 +88,7 @@ const newLi = document.querySelector('li')
 newLi.innerText = 'Adds something to this list.'
 makeTodo(newLi);
 
-const makeHeader = (text, size) => {
+makeHeader = (text, size) => {
   const header = document.createElement('h' + size)
   header.innerText = text;
 }
