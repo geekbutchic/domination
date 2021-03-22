@@ -21,7 +21,7 @@ addImage(
   "http://3.bp.blogspot.com/-TuUwxi-_B60/T8nNqt-5s8I/AAAAAAAAAug/AptLf_dWBaY/s1600/Cavalier_King_Charles_Spaniel_Puppies_pic.jpg"
 );
 
-const removeLastLi = () => {
+removeLastLi = () => {
   document.querySelector("#arguments").lastElementChild.remove();
 };
 
@@ -76,26 +76,6 @@ const changeFontSize = (element, newFontSize) => {
 const thing2 = document.querySelector('#thing-2');
 changeFontSize(thing2, '50px');
 
-// 1. Write a function that takes in text and returns a new `<li>` 
-// with that text as its `innerText`.
-
-// makeTodo = (element) => {
-//   const arguments = document.querySelector("#arguments");
-//   arguments.appendChild(element);
-// };
-
-// const newLi = document.querySelector('li')
-// newLi.innerText = 'Adds something to this list.'
-// makeTodo(newLi);
-
-// makeHeader = (text, size) => {
-//   const header = document.createElement('h' + size)
-//   header.innerText = text;
-// }
-
-// const header = makeHeader("I'm a header", 2);
-// argumentAppends(header)
-
 
 function createListItem (text) {
   const listItem = document.createElement('li');
@@ -107,6 +87,8 @@ function createListItem (text) {
 const newListItem = createListItem('This is a new list item');
 argumentAppends(newListItem);
 
+
+// Creates Header 
 function createHeader(size, text) {
   const header = document.createElement(`h${size}`);
   header.innerText = text;
